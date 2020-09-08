@@ -9,7 +9,7 @@ Background:
 
 Chess.com users can practice their tactical abilities by training on puzzles. Both players and problems have ELO ratings. A player’s rating increases when they solve a puzzle correctly and decreases when they give an incorrect solution. A puzzle’s rating increases when a player gives an incorrect solution and decreases when they solve it correctly. This system allows chess.com to match players with puzzles of a difficulty fitting to their chess strength. Unfortunately, new puzzles do not have accurate ratings until they are given to many users, which means users may be presented with puzzles far above or far below their strength. 
 
-The distribution of ratings is shown below. Simple puzzles are easier to find than hard puzzles, so the data is heavily skewed to the right. The mean puzzle rating was 1067. Predicting the mean for each puzzle gives a baseline MSE of 705,240, which is a RMSE of 840. 
+Simple puzzles are easier to find than hard puzzles, so the data is heavily skewed to the right. The mean puzzle rating was 1067. Predicting the mean for each puzzle gives a baseline MSE of 705,240, which is a RMSE of 840. 
 
 
  
@@ -378,7 +378,7 @@ Active player (0: black, 1: white
 
  
 
-Here is a visual of the board: 
+
 
  
 
@@ -388,7 +388,7 @@ Here is a visual of the board:
 
  
 
-In addition to the 18 FEN channels, I added 28 solution channels because the longest solution in my dataset was 28 moves. Each channel was all 0s except for a 1 where the piece started and a –1 where it ended. In the above solution, black’s last move was moving the rook from a8 to f8. The rest of the solution is: Rxf8+, Kh7, Rh1#. This solution would look like this: 
+In addition to the 18 FEN channels, I added 28 solution channels because the longest solution in my dataset was 28 moves. Each channel was all 0s except for a 1 where the piece started and a –1 where it ended. 
 
  
 
